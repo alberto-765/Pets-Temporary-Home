@@ -1,0 +1,34 @@
+#header {
+    background: rgb(33, 148, 188);
+
+}
+
+#menu li:first-child>i {
+    height: fit-content;
+}
+
+#menu li:first-child>a {
+    background-color: #BDCDD6;
+}
+
+/* Hacer que la lista ocupe el espacio del contenido */
+#menu>ul>li {
+    width: fit-content;
+}
+
+/* Hacer que el body ocupe como minimo el 100 vh  */
+body {
+    min-height: 100vh;
+}
+
+/* Configuracion para móviles  */
+@media screen and (max-width: 576px) {
+    #header>nav>a {
+        font-size: large !important;
+    }
+
+    #header>nav>a>img {
+        width: 30px !important;
+    }
+
+}

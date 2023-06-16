@@ -1,0 +1,28 @@
+/* Anmiacion de rebotar/meneo  */
+.rebotar {
+  animation: rebotar 0.9s linear both;
+}
+
+/* Tamaño de check o alerta al acabar subida  */
+.subirCheck,
+.subirAlert {
+  width: fit-content;
+}
+
+/* Barra progreso subida cargada por completo  */
+.barraCargada {
+  width: 100%;
+}
+
+/* Barra de progreso subida  */
+.subirProgres :first-child {
+  width: 0%;
+  transition: width 1s ease-in-out;
+}
+
+/* Tooltips para ver tipos de formatos que pueden subirse  */
+
+
+.formatosImagenes:hover>div {
+  display: inline-block !important;
+}

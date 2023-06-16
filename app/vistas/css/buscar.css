@@ -1,0 +1,275 @@
+/* ESTILO PÁGINA BUSCAR CUIDADOR  */
+.sectionFiltros {
+  position: relative;
+  z-index: 1000;
+  height: min-content;
+  padding: 20px 0;
+}
+
+.sectionFiltros::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+}
+
+/* Imagenes: de perro o gato  */
+.sectionFiltros button>input[type="checkbox"]:hover,
+.sectionFiltros button>input[type="radio"]:hover {
+  cursor: pointer;
+}
+
+.sectionFiltros button>img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+/* Input radio debajo de las imagenes  */
+.sectionFiltros button>input[type="checkbox"],
+.sectionFiltros button>input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Texto detalles en la ficha de cada cuidador  */
+.detalles {
+  text-align: justify;
+}
+
+/* Estilo hover tarjetas de cuidadores  */
+#cuidadores-contenedor>.tarjeta {
+  position: relative;
+  height: 250px;
+  box-shadow: rgba(33, 35, 38, 0.1) 7px 0px 9px 0px;
+  transition: padding 1.2s;
+}
+
+#cuidadores-contenedor>.tarjeta::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  filter: contrast(110%);
+  background: rgba(33, 148, 188, 1);
+  background: linear-gradient(90deg,
+      rgba(126, 169, 193, 1) 0%,
+      rgba(33, 148, 188, 1) 100%);
+  left: 0;
+  transition: all 1.2s;
+}
+
+#cuidadores-contenedor>.tarjeta:hover::before {
+  width: 35px;
+}
+
+#cuidadores-contenedor>.tarjeta:hover {
+  padding-left: 35px;
+}
+
+.iconoServicio {
+  width: 30px;
+}
+
+.servicioCuidador {
+  color: #25cee5;
+  display: flex;
+  align-items: center;
+  column-gap: 7px;
+}
+
+.precioCuidador {
+  color: #25cee5;
+  text-shadow: #25cee563 0px 0px 10px;
+}
+
+#paginacion {
+  --bs-pagination-color: black;
+}
+
+#spinnerCuidadores {
+  height: 100vh;
+}
+
+.noEncontrados {
+  margin-top: 300px;
+}
+
+.accordion .form-check-input {
+  font-size: 20px !important;
+  margin-top: 0.25rem !important;
+}
+
+#paginacion:hover {
+  cursor: pointer;
+}
+
+#paginacion .paginacionSelec a {
+  background-color: #25cfe521 !important;
+}
+
+#paginacion .page-link:hover {
+  color: #25cfe5 !important;
+}
+
+.noclickPaginacion {
+  pointer-events: none;
+}
+
+/* De 990 px a 1100px */
+@media screen and (min-width: 990px) and (max-width: 1100px) {
+  .detalles {
+    font-size: 14px;
+  }
+}
+
+/* Menos de 990 px */
+@media screen and (max-width: 989px) {
+  .accordion-header>button>h5 {
+    font-size: medium;
+  }
+
+  .accordion-body {
+    font-size: small;
+  }
+}
+
+/* de 770 a 989 */
+@media screen and (min-width: 770px) and (max-width: 989px) {
+
+  /* texto de detalles más pequeño */
+  .detalles {
+    font-size: 13px;
+  }
+}
+
+/* de 571 a 989 */
+@media screen and (min-width: 574px) and (max-width: 769px) {
+
+  /* texto de detalles más pequeño */
+  .detalles {
+    font-size: 15px;
+  }
+
+  .noEncontrados {
+    margin-top: 0;
+  }
+}
+
+/* de 424px a 575px */
+@media screen and (min-width: 424px) and (max-width: 575px) {
+  #cuidadores-contenedor>.tarjeta:hover {
+    border: none !important;
+  }
+
+  /* texto de detalles más pequeño */
+  .detalles {
+    font-size: 15px;
+  }
+
+  .precioCuidador,
+  .servicioCuidador {
+    font-size: 17px;
+  }
+
+  #cuidadores-contenedor>.tarjeta:hover::before {
+    width: 0;
+  }
+
+  #cuidadores-contenedor>.tarjeta:hover {
+    padding-left: 0;
+  }
+
+  #cuidadores-contenedor>.tarjeta {
+    height: 100vh;
+  }
+
+  #cuidadores-contenedor>.tarjeta>.row {
+    max-height: 90% !important;
+  }
+
+  #cuidadores-contenedor>.tarjeta>.row>.col-12:first-child {
+    height: 60% !important;
+  }
+
+  #cuidadores-contenedor>.tarjeta>.row>.col-12:nth-child(2) {
+    height: 40% !important;
+  }
+
+
+  .noEncontrados {
+    margin-top: 0;
+  }
+}
+
+/* de 376px a 424px */
+@media screen and (max-width: 424px) {
+  #cuidadores-contenedor>.tarjeta:hover {
+    border: none !important;
+  }
+
+  /* texto de detalles más pequeño */
+  .detalles {
+    font-size: 15px;
+  }
+
+  #cuidadores-contenedor>.tarjeta h4,
+  #cuidadores-contenedor>.tarjeta h5 {
+    font-size: 17px;
+  }
+
+  .precioCuidador,
+  .servicioCuidador {
+    font-size: 17px;
+  }
+
+  #cuidadores-contenedor>.tarjeta:hover::before {
+    width: 0;
+  }
+
+  #cuidadores-contenedor>.tarjeta:hover {
+    padding-left: 0;
+  }
+
+  #cuidadores-contenedor>.tarjeta {
+    height: 100vh;
+  }
+
+  #cuidadores-contenedor>.tarjeta>.row {
+    max-height: 90% !important;
+  }
+
+  #cuidadores-contenedor>.tarjeta>.row>.col-12:first-child {
+    height: 60% !important;
+  }
+
+  #cuidadores-contenedor>.tarjeta>.row>.col-12:nth-child(2) {
+    height: 40% !important;
+  }
+
+  .noEncontrados {
+    margin-top: 0;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  #formFiltrarModal {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  #formFiltrarNoModal {
+    display: none;
+  }
+}

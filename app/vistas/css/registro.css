@@ -1,0 +1,76 @@
+/* poner fondo al wrapper  */
+#wrapperRegistro {
+  background-image: url(../../assets/img/fondo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#wrapperRegistro form {
+  background-color: rgba(232, 232, 232, 0.49);
+}
+
+#wrapperRegistro i {
+  font-size: 50px;
+}
+
+/* Div separador  */
+#separador {
+  width: 1px;
+  min-height: 1px;
+}
+
+
+
+/* suprimir user select en los iconos  */
+#wrapperRegistro .input-group>.input-group-text {
+  user-select: none;
+}
+
+/* Imagenes botones inputs y checksbox  */
+.elegir label:hover {
+  cursor: pointer;
+}
+
+.elegir label img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+/* Texto invalid feedback  */
+.invalid-feedback {
+  font-size: medium;
+}
+
+/* Cambiar el color a los acordeones del registro  */
+.accordion {
+  --bs-accordion-bg: rgba(255, 255, 255, 0.293);
+}
+
+/* Pantalla menos de 576px  */
+@media screen and (max-width: 576px) {
+
+  /* Div seaparador  de elegir usuario*/
+  #separador {
+    width: 100% !important;
+  }
+
+  /* tamaaño botones de servicios en registro cuidador  */
+  .servicios label {
+    font-size: 12px;
+    width: 100% !important;
+  }
+
+  /* Tamaño de texto de los inputs file de subirImagenes  */
+  #wrapperFotos .form-control {
+    font-size: 12px;
+  }
+
+  #wrapperRegistro form .btn-outline-secondary {
+    font-size: 14px !important;
+  }
+}
+
+/* APARTADO PÁGINA DE SUBIR FOTOS  */
+/* poner fondo al wrapper  */

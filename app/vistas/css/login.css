@@ -1,0 +1,76 @@
+/* ESTILO LOGIN */
+/* Hacer que la ventana de login ocupe toda la pantalla */
+.wrapperLogin>.container {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+}
+
+/* poner fondo al wrapper  */
+.wrapperLogin {
+  background-image: url(../../assets/img/fondo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Contenedor Imagen Central de Login  */
+.icono-login img {
+  height: 200px;
+}
+
+/* Contenedor del login con fondo gradient  */
+.login {
+  background: linear-gradient(0deg, rgb(17 16 73) 0%, rgb(38 58 121) 100%);
+  user-select: none;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.427) 0 2px 10px;
+}
+
+/* Formulario  */
+/* Cursor encima de los inputs  */
+
+/* inputs en focus  */
+#formlogin input:focus {
+
+  outline: none;
+}
+
+/* place holder de los inputs  */
+#formlogin input::placeholder {
+  color: white;
+}
+
+/* Boton login  */
+#formlogin>.submit>button {
+  background: linear-gradient(89deg, rgb(26 26 106) 0%, rgb(74 5 175) 50%, rgb(72 0 134) 100%);
+}
+
+/* Boton login  acitvo*/
+#formlogin>.submit>button:active {
+  border: none;
+  padding: none;
+}
+
+/* contenedor de los errores */
+.error-container {
+  width: 100%;
+  color: red;
+}
+
+
+
+/* quitar border-radius del login en móvil */
+@media screen and (max-width: 574px) {
+
+  /* quitarle borde redondeado  */
+  .login {
+    border-radius: 0px;
+  }
+
+  /* Hacer que la ventana de login ocupe toda la pantalla */
+  .wrapperLogin>.container {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

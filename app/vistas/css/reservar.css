@@ -1,0 +1,70 @@
+/* Estilo para la ventana de reservar  */
+.tdPrecio {
+  font-weight: 500 !important;
+  background-color: #d1e7dd !important;
+  border-radius: 5px;
+}
+
+/* Spinner de carga */
+.spinnerReserva {
+  align-self: center;
+  position: relative;
+  max-width: 100%;
+  width: 25em;
+  height: 13em;
+}
+
+.spinnerReserva::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(80, 80, 80, 0.186);
+
+  filter: blur(4px);
+}
+
+
+
+.fechaPequenna {
+  font-size: 14px;
+}
+
+/* Tipos de dias para reservar  */
+.diaDefault {
+  border: 0px;
+}
+
+.diaDefault>.columnaDia {
+  background-color: #cff4fc;
+}
+
+.diaValido {
+  border: 1px solid #a3cfbb;
+}
+
+.diaValido>.columnaDia {
+  background-color: #a3cfbb;
+}
+
+.diaInValido {
+  border: 1px solid #f8d7da;
+}
+
+.diaInValido>.columnaDia {
+  background-color: #f8d7da;
+}
+
+#floatingTextarea {
+  height: 250px;
+  resize: none;
+  padding-top: 35px;
+}
+
+.tablaFacturas {
+  height: fit-content;
+}
+
+.btnBorrarDiaReserva {
+  width: 35px;
+}

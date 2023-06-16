@@ -1,0 +1,31 @@
+/* Fondo inicio cuidadores  */
+.wrapperInicio {
+  background-image: url(../../assets/img/fondoExtremadura.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapperInicio>.fondoNegro {
+  background-color: rgba(0, 0, 0, 0.755);
+}
+
+.wrapperInicio .container {
+  animation: aparecer 2s ease-in-out forwards;
+}
+
+/* Imagenes del carousel de inicio de cuidadores  */
+.carouselInicioCuid {
+  display: block;
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 25rem;
+}
+
+/* Pantalla menor de 850px  */
+@media screen and (max-width: 850px) {
+  .carouselInicioCuid {
+    height: 15rem;
+  }
+}

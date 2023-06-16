@@ -1,0 +1,166 @@
+/* Aparecer carousel de inicio cuidadores  */
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateY(10em);
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+/* Hacer como que cae y rebota  */
+@keyframes rebotar {
+  0% {
+    transform: translateY(-45px);
+    animation-timing-function: ease-in;
+  }
+
+  40% {
+    transform: translateY(-24px);
+    animation-timing-function: ease-in;
+  }
+
+  65% {
+    transform: translateY(-12px);
+    animation-timing-function: ease-in;
+  }
+
+  82% {
+    transform: translateY(-6px);
+    animation-timing-function: ease-in;
+  }
+
+  93% {
+    transform: translateY(-4px);
+    animation-timing-function: ease-in;
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes animacionMeneo {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateX(10px);
+  }
+
+  80% {
+    transform: translateX(8px);
+  }
+
+  90% {
+    transform: translateX(-8px);
+  }
+}
+
+@keyframes aparecerBlur {
+  0% {
+    transform: scale(0);
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes desaparecerBlur {
+  0% {
+    filter: blur(0.01px);
+  }
+
+  100% {
+    transform: scale(-1);
+    filter: blur(13px);
+    opacity: 0;
+  }
+}
+
+/* Animacion para hacer aparecer las letras  */
+@keyframes aparecerLetras {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Anmicaion de aparecer para las tarjetas cuidadores*/
+@keyframes aparecerTarjetas {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  30% {
+    opacity: 0.1;
+    transition: ease-in-out;
+  }
+
+  100% {
+    transition: ease-in-out;
+    opacity: 100;
+  }
+}
+
+/* Animacion de menearse  horizontalmente*/
+.animacionMeneo {
+  animation: animacionMeneo 0.8s linear both;
+}
+
+/* Animacion de aparecer  */
+.animacionAparecer {
+  animation: aparecer 1s ease both;
+}
+
+/* Animacion para hacer aparecer las letras  */
+.animacionAparecerLetras {
+  animation: aparecerLetras 0.4s linear both;
+}
+
+/* Animacion de aparecer con blur  */
+.aparecerBlur {
+  animation: aparecerBlur 0.4s ease both;
+}
+
+/* Animacion de desaparecer con blur  */
+.desaparecerBlur {
+  animation: desaparecerBlur 0.4s ease both;
+}
+
+/* Animacion de aparecer para tarjetas cuidadores */
+.aparecerTarjetas {
+  animation: aparecerTarjetas 1s ease-out both;
+}

@@ -1,0 +1,61 @@
+/* Tabla de borrar mascotas  */
+#mascotasBorrar .seleccionarMascota:checked {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+}
+
+#mascotasBorrar .seleccionarMascota:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  border: none;
+}
+
+/* Tarjetas de mascotas  */
+.tarjeta_Mascota {
+  height: 330px;
+}
+
+@media screen and (max-width: 768px) {
+  .tarjeta_Mascota {
+    height: auto;
+  }
+
+  .tarjeta_Mascota .card-title {
+    font-size: 15px !important;
+  }
+}
+
+.iconoTipoMascota {
+  height: 50px;
+  width: 50px;
+}
+
+/* Text area de detalles al crear  mascota */
+.textarea_masdetalles {
+  white-space: normal !important;
+}
+
+/* Vista subir iamgenes mascota  */
+#wrapperSubirImagenesMasc {
+  background-image: url(../../assets/img/fondo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#wrapperSubirImagenesMasc form {
+  background-color: rgba(232, 232, 232, 0.49);
+}
+
+
+
+
+/* Carousel con la galeria de la mascota */
+#carouselGaleria {
+  height: 70vh;
+}
+
+/* EDITAR MASCOTA  */

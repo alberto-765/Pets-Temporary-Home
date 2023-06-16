@@ -1,0 +1,271 @@
+/* ESTILO PÁGINA DE INICIO  */
+
+/* Contenedor con el formulario para buscar  */
+#buscar {
+  border: 3px solid #8ecae6;
+}
+
+/* Imagen perro feliz del inicio  */
+#perroInicio {
+  width: 8rem;
+  object-fit: contain;
+}
+
+.wrapper-apartado2 {
+  position: relative;
+  min-height: 100vh;
+  z-index: 1000;
+}
+
+.wrapper-apartado2>#fondoWrapper2 {
+  z-index: -100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../assets/img/carousel3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: opacity(40%) brightness(40%);
+  background-color: #202020;
+}
+
+/* Efecto maquina titulo contenedor buscar */
+.tituloMaquina {
+  color: #8ecae6;
+  font-weight: 400;
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 2px solid #8ecae6;
+  width: 29ch;
+  animation: aumentarWidth 7s steps(29) forwards,
+    parpadear 0.5s step-end infinite alternate;
+  overflow: hidden;
+}
+
+.tituloMaquina2 {
+  color: #8ecae6;
+  font-weight: 400;
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 2px solid #8ecae6;
+  width: 0;
+
+  animation: aumentarWidth2 7s steps(30) 7s forwards,
+    parpadear 0.5s step-end infinite alternate;
+  overflow: hidden;
+}
+
+.tituloMaquina3 {
+  border-bottom: 3px solid black;
+  color: #000000;
+  font-weight: 400;
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 2px solid;
+  width: 33ch;
+  animation: aumentarWidth 7s steps(33) forwards,
+    parpadear 0.5s step-end infinite alternate;
+  overflow: hidden;
+}
+
+.tituloMaquina4 {
+  border-bottom: 2px solid #8ecae6;
+  color: #8ecae6;
+  font-weight: 400;
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 2px solid #8ecae6;
+  width: 30ch;
+  animation: aumentarWidth 7s steps(30) forwards,
+    parpadear 0.5s step-end infinite alternate;
+  overflow: hidden;
+}
+
+/* Hacer que el width aumente  */
+@keyframes aumentarWidth {
+  from {
+    width: 0;
+  }
+}
+
+/* Hacer que el width disminuya */
+@keyframes aumentarWidth2 {
+  to {
+    width: 30ch;
+  }
+}
+
+/* hacer que parpade el borde  */
+@keyframes parpadear {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+/* hacer que parpade el borde  */
+@keyframes parpadear2 {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+/* Segunda fila contenedor buscar  */
+#inicioBuscar>.row {
+  background-color: #e6e6e6;
+}
+
+/* Seleccionar las columnas de la fila ubicaciony fecha  */
+.form__seccionUbi>.col {
+  background-color: #e6e6e6;
+}
+
+
+/* Seleccionar todos los buttons  */
+#inicioBuscar>.row button {
+  transition: all 0.3s;
+}
+
+/* Columna contenedor tipo de mascotas  */
+.seleccion img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Estilo inputs columna de mascotas */
+.seleccion input[type="checkbox"],
+.seleccion input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Seleccionar el input de la ubicacion  */
+.form__seccionUbi>.col>.form-floating>input {
+  height: fit-content;
+}
+
+/* Subtitulos del apartado servicios  */
+.container-servicios .text-muted {
+  text-indent: 15px;
+}
+
+/* Tamaño de las imagenes apartado servicios  */
+.container-servicios img {
+  object-fit: contain;
+  height: 70px;
+  width: 70px;
+}
+
+/* Apartado como funciona la plataforma  */
+.wrapper-apartado3 .lista-horizontal p {
+  font-size: 20px;
+}
+
+.wrapper-apartado3 .lista-horizontal img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+}
+
+/* Para adapatar contenido a móvil  */
+@media screen and (max-width: 530px) {
+  #perroInicio {
+    width: 5rem;
+    object-fit: contain;
+  }
+
+  .seleccion {
+    width: 100% !important;
+  }
+
+  /* Subtitulos del apartado servicios  */
+  .container-servicios .text-muted {
+    text-indent: 0px;
+  }
+
+  .seleccion img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+
+  /* Efecto maquina titulo contenedor buscar */
+  .tituloMaquina {
+    font-size: 25px;
+  }
+
+  .tituloMaquina2,
+  .tituloMaquina3,
+  .tituloMaquina4 {
+    font-size: 20px;
+  }
+
+  #inputUbi~label {
+    font-size: 15px;
+  }
+
+  #fechas input {
+    font-size: 11px;
+  }
+
+  /* Apartado como funciona la plataforma  */
+  .wrapper-apartado3 .lista-horizontal p {
+    font-size: 15px;
+  }
+}
+
+/* Menos desde 481px hasta 750px  */
+@media screen and (max-width: 750px) and (min-width: 530px) {
+  #servicio .titulo>span {
+    font-size: 25px;
+  }
+
+  /* Efecto maquina titulo contenedor buscar */
+  .tituloMaquina {
+    font-size: 34px;
+  }
+
+  .tituloMaquina2,
+  .tituloMaquina3,
+  .tituloMaquina4 {
+    font-size: 28px;
+  }
+}
+
+/* Desde 751px hasta 1000px  */
+@media screen and (min-width: 751px) and (max-width: 1000px) {
+
+  /* Apartado como funciona la plataforma  */
+  .wrapper-apartado3 .lista-horizontal span {
+    font-size: 17px;
+  }
+
+  /* Efecto maquina titulo contenedor buscar */
+  .tituloMaquina {
+    font-size: 36px;
+  }
+
+  .tituloMaquina2,
+  .tituloMaquina3,
+  .tituloMaquina4 {
+    font-size: 36px;
+  }
+}
+
+#carouselFondo {
+  z-index: -100;
+}
+
+/* FIN DE ESTILO PÁGINA DE INICIO  */
